@@ -47,12 +47,13 @@ def category():
     with col3:     
          if st.button("makeup parlour"):
                 st.write("list of makeup palours")    
-
+def Guid():
+    st.write("this a guid which will have complete guid and navigation details for user")
 def home():
     selected=option_menu(
         menu_title=None,
-        options=["Parlour Near Me","Book an Appointment","Categories"],
-        icons=["geo-alt", "calendar", "list"],
+        options=["Parlour Near Me","Book an Appointment","Categories","Guid"],
+        icons=["geo-alt", "calendar", "list","book"],
         orientation="horizontal",
         default_index=0
     )
@@ -64,6 +65,8 @@ def home():
 
     if selected== "Categories":
             category()
+    if selected== "Guid":
+            Guid()     
             
              
 if st.session_state.current_page == "Home":
